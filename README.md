@@ -25,7 +25,7 @@ de conocimiento y llama a `comparte_arg/2` que determina qué característica es
 exactamente por un par de cartas de mostro. Este es un predicado que es `true` solo si X y Y y Y y Z comparten una y solo una característica (nivel, poder o atributo). `mundoChiquito/0` imprime en el intérprete todas las tripletas de cartas X Y Z que cumplan esta condición. Para agregar una carta de mostro a la base de conocimiento, `agregarMostro/0` solicita al usuario las características de la carta, hace la validación de las entradas y agrega la carta al final de la base de conocimiento.
 
 Entre las verificaciones hechas por `agregarMostro/0` tenemos:
-- ***Verificar validez del nombre y unicidad***: `verificar_unicidad/1` y `verificar_nombre/1` verifican que el nombre sea único y que se compone únicamente de caracteres alfabéticos.
+- ***Verificar validez del nombre y unicidad***: `verificar_unicidad/1` y `verificar_nombre/1` verifican que el nombre sea único y que se compone únicamente de caracteres alfabéticos de la codificación ASCII. Son implementadas funciones auxiliares `is_alphabetic_string\1`, `is_alphabetic_codes\1`, `is_alphabetic_char_code\1` que apoyan a la verificación del nombre.
 - ***Verificar validez del nivel***: `verificar_nivel/1` se encarga de verificar que el usuario dio un tipo numérico entero y que sea un entero entre 1 y 12.
 - ***Verificar atributo***: `verificar_atributo/1` verifica si el usuario escribió un atributo válido. Es decir, si es el atributo *agua, fuego, viento, tierra, luz, oscuridad, divino*.
 - ***Verificar poder***: `verificar_poder/1` verifica si el poder de la carta es un múltiplo
