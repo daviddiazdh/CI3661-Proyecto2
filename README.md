@@ -7,7 +7,7 @@
 
 ## Instrucciones de ejecución
 
-El usuario del programa requiere abrir el intérprete de Prolog:
+El usuario del programa requiere:
 
 1.  **Abrir el intérprete de Prolog:** `swipl`
 2.  **Cargar la base de conocimiento:** `?-[mundo_chiquito_base]`
